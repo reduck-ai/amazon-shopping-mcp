@@ -1,0 +1,58 @@
+{
+	"count": 9,
+	"scripts": [
+		{
+			"path": "README.md",
+			"url": "https://reduck.ai/use-cases/amazon-shopping-mcp",
+			"lastmod": "2026-09-27"
+		},
+		{
+			"address": "@reduck/amazon.com/add_to_cart",
+			"path": "scripts/amazon.com/add_to_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/add_to_cart",
+			"lastmod": "2026-09-27"
+		},
+		{
+			"address": "@reduck/amazon.com/buy_now",
+			"path": "scripts/amazon.com/buy_now.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/buy_now",
+			"lastmod": "2026-09-27"
+		},
+		{
+			"address": "@reduck/amazon.com/cancel_order",
+			"path": "scripts/amazon.com/cancel_order.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/cancel_order",
+			"lastmod": "2026-09-27"
+		},
+		{
+			"address": "@reduck/amazon.com/checkout_cart",
+			"path": "scripts/amazon.com/checkout_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/checkout_cart",
+			"lastmod": "2026-09-27"
+		},
+		{
+			"address": "@reduck/amazon.com/get_checkout_information",
+			"path": "scripts/amazon.com/get_checkout_information.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/get_checkout_information",
+			"lastmod": "2026-09-27"
+		},
+		{
+			"address": "@reduck/amazon.com/list_cart_items",
+			"path": "scripts/amazon.com/list_cart_items.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/list_cart_items",
+			"lastmod": "2026-09-27"
+		},
+		{
+			"address": "@reduck/amazon.com/place_order",
+			"path": "scripts/amazon.com/place_order.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/place_order",
+			"lastmod": "2026-09-27"
+		},
+		{
+			"address": "@reduck/amazon.com/remove_from_cart",
+			"path": "scripts/amazon.com/remove_from_cart.md",
+			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/remove_from_cart",
+			"lastmod": "2026-09-27"
+		}
+	]
+}
