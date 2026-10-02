@@ -4,7 +4,7 @@ Automatically add Amazon product to cart on amazon.com. Add a product to your Am
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/add_to_cart`
-- Updated: 2026-09-27 (v2)
+- Updated: 2026-10-01 (v3)
 - Author: Reduck AI (reduck)
 
 ## Run it

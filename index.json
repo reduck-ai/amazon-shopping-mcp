@@ -4,13 +4,13 @@
 		{
 			"path": "README.md",
 			"url": "https://reduck.ai/use-cases/amazon-shopping-mcp",
-			"lastmod": "2026-09-27"
+			"lastmod": "2026-10-02"
 		},
 		{
 			"address": "@reduck/amazon.com/add_to_cart",
 			"path": "scripts/amazon.com/add_to_cart.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/add_to_cart",
-			"lastmod": "2026-09-27"
+			"lastmod": "2026-10-01"
 		},
 		{
 			"address": "@reduck/amazon.com/buy_now",
@@ -40,7 +40,7 @@
 			"address": "@reduck/amazon.com/list_cart_items",
 			"path": "scripts/amazon.com/list_cart_items.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/list_cart_items",
-			"lastmod": "2026-09-27"
+			"lastmod": "2026-10-01"
 		},
 		{
 			"address": "@reduck/amazon.com/place_order",

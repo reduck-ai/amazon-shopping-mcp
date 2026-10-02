@@ -1,6 +1,12 @@
 # Amazon Shopping MCP
 
-An Amazon shopping MCP server that shops as you. Let Claude, ChatGPT or any MCP client add to cart, review the checkout, place the order and cancel it, in your own Chrome, with no API key.
+Amazon has no API for what you do signed in: reading product reviews, filling your cart, checking out, cancelling an order. This Amazon MCP server (Model Context Protocol) lets Claude, ChatGPT or any MCP client do it as you, in your own Chrome, with no API key.
+
+![One integration, every website](https://docs.reduck.ai/overview/one-integration-every-website.png)
+
+[Reduck MCP](https://docs.reduck.ai) gives your agent reusable browser scripts for the sites that have no API. They run in your own Chrome, through the Reduck extension, where you are already signed in: no credentials exposed, and no bot detection.
+
+**Get started:** [docs.reduck.ai](https://docs.reduck.ai)
 
 ## Overview
 
