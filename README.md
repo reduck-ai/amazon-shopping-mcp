@@ -1,5 +1,7 @@
 # Amazon Shopping MCP
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/reduck-ai/amazon-shopping-mcp)
+
 Amazon has no API for what you do signed in: reading product reviews, filling your cart, checking out, cancelling an order. This Amazon MCP server (Model Context Protocol) lets Claude, ChatGPT or any MCP client do it as you, in your own Chrome, with no API key.
 
 ![One integration, every website](https://docs.reduck.ai/overview/one-integration-every-website.png)
