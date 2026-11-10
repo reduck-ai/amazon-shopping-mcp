@@ -4,7 +4,7 @@ Automatically cancel Amazon order on amazon.com. Cancel an Amazon.com order that
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/cancel_order`
-- Updated: 2026-09-27 (v2)
+- Updated: 2026-10-31 (v6)
 - Author: Reduck AI (reduck)
 
 ## Run it

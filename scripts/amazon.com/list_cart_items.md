@@ -1,10 +1,10 @@
 # List Amazon cart items
 
-Automatically list Amazon cart items on amazon.com. List the items in your Amazon.com shopping cart: ASIN, title, quantity and unit price, whether each is selected for checkout and whether it is out of stock, plus the cart subtotal. Saved-for-later items are not included.
+Automatically list Amazon cart items on amazon.com. List the items in your Amazon.com shopping cart: ASIN, title, quantity and unit price, whether each is selected for checkout and whether it is out of stock, plus the cart subtotal. An empty cart returns an empty list. Saved-for-later items are not included. A signed-out browser fails with a signed-out error asking to sign in to amazon.com.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/list_cart_items`
-- Updated: 2026-10-01 (v3)
+- Updated: 2026-10-31 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -28,7 +28,7 @@ It takes no input.
 
 ### What does "List Amazon cart items" do?
 
-List the items in your Amazon.com shopping cart: ASIN, title, quantity and unit price, whether each is selected for checkout and whether it is out of stock, plus the cart subtotal. Saved-for-later items are not included.
+List the items in your Amazon.com shopping cart: ASIN, title, quantity and unit price, whether each is selected for checkout and whether it is out of stock, plus the cart subtotal. An empty cart returns an empty list. Saved-for-later items are not included. A signed-out browser fails with a signed-out error asking to sign in to amazon.com.
 
 ### How do I automatically list Amazon cart items on amazon.com?
 

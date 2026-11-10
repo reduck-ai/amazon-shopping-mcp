@@ -1,10 +1,10 @@
 # Get Amazon checkout information
 
-Automatically get Amazon checkout information on amazon.com. Review an Amazon.com checkout before placing the order: delivery address, payment method, items, delivery options with their prices, and the order summary down to the order total. It reads the checkout page open in the current session, so run it in the same session after Buy Amazon product now or Check out Amazon cart stopped at checkout; it does not open a checkout by itself.
+Automatically get Amazon checkout information on amazon.com. Review the checkout of your Amazon.com cart without ordering: recipient, delivery address, payment method, each selected item with its ASIN, quantity and price, the delivery options with their prices, the order summary down to the order total, and a review_hash. Pass address, payment (a card's last 4 digits) and delivery_option to review the checkout with those choices instead of the account's defaults. Pass the review_hash and the same choices to Place Amazon order to order exactly this checkout. The cart stays as it is. Fails on an empty cart.
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/get_checkout_information`
-- Updated: 2026-09-27 (v3)
+- Updated: 2026-11-02 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -17,23 +17,26 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/get_checkout_informatio
 
 ## Input
 
-It takes no input.
+- `address` (string, optional): The delivery address as the account lists it: the recipient's name, then the address line (for example Jane Doe, 12 Main Street). It must match exactly one of the account's addresses; otherwise nothing is ordered and the run fails with the list. Omit it to keep Amazon's choice. Pass the same value to the review and to the order.
+- `payment` (string, optional): The last 4 digits of the card to pay with. It must match exactly one card of the account; otherwise nothing is ordered and the run fails with the cards. Omit it to keep Amazon's choice. Pass the same value to the review and to the order.
+- `delivery_option` (string, optional): The id of a delivery option from delivery_options of a review (for example premium-next-fr), chosen in every delivery group. If a group does not offer it, nothing is ordered and the run fails with the options offered. Omit it to keep Amazon's choice. Pass the same value to the review and to the order.
 
 ## Output
 
-- `groups` (array, required)
-- `totals` (array, required): Order summary lines in page order; the last one is the order total. type is Amazon's own line code (e.g. ITEMS_TAX_EXCLUSIVE), null for the total.
-- `checkout_url` (string, required)
-- `address` (string | null, optional)
-- `payment` (string | null, optional)
-- `recipient` (string | null, optional)
+- `groups` (array, required): The checkout's delivery groups: the items that ship together, with their delivery options.
+- `totals` (array, required): Order summary lines in page order; the last one is the order total. type is Amazon's own line code (for example ITEMS_TAX_EXCLUSIVE), null for the total.
+- `review_hash` (string, required): Hash of the recipient, address, payment method, items, selected delivery options and order total shown. Pass it to place the order: the order is placed only while the checkout has the same hash.
+- `checkout_url` (string, required): URL of the checkout page that was read.
+- `address` (string | null, optional): Delivery address the checkout uses.
+- `payment` (string | null, optional): Payment method the checkout uses, as displayed (for example Paying with Mastercard 1234).
+- `recipient` (string | null, optional): Who receives the order, as the checkout shows it (for example Deliver to Jane Doe).
 - `order_total` (string | null, optional)
 
 ## FAQ
 
 ### What does "Get Amazon checkout information" do?
 
-Review an Amazon.com checkout before placing the order: delivery address, payment method, items, delivery options with their prices, and the order summary down to the order total. It reads the checkout page open in the current session, so run it in the same session after Buy Amazon product now or Check out Amazon cart stopped at checkout; it does not open a checkout by itself.
+Review the checkout of your Amazon.com cart without ordering: recipient, delivery address, payment method, each selected item with its ASIN, quantity and price, the delivery options with their prices, the order summary down to the order total, and a review_hash. Pass address, payment (a card's last 4 digits) and delivery_option to review the checkout with those choices instead of the account's defaults. Pass the review_hash and the same choices to Place Amazon order to order exactly this checkout. The cart stays as it is. Fails on an empty cart.
 
 ### How do I automatically get Amazon checkout information on amazon.com?
 
@@ -45,11 +48,11 @@ You do not need one. "Get Amazon checkout information" drives the real amazon.co
 
 ### What information do I need to provide?
 
-Nothing. It takes no input.
+Optional: address, payment, delivery_option.
 
 ### What does it return?
 
-It returns groups, totals, address, payment, recipient, order_total, checkout_url.
+It returns groups, totals, address, payment, recipient, order_total, review_hash, checkout_url.
 
 ### Do I need to be logged in to amazon.com?
 
