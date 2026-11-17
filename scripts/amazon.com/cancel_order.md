@@ -4,7 +4,7 @@ Automatically cancel Amazon order on amazon.com. Cancel an Amazon.com order that
 
 - Site: amazon.com
 - Address: `reduck/amazon.com/cancel_order`
-- Updated: 2026-10-31 (v6)
+- Updated: 2026-11-16 (v8)
 - Author: Reduck AI (reduck)
 
 ## Run it
@@ -22,8 +22,9 @@ npx @reduck-ai/cli@latest run --script reduck/amazon.com/cancel_order
 ## Output
 
 - `items` (array, required): Titles of the items the cancellation was requested for.
+- `pending` (boolean, required): True when Amazon accepted the request but is still processing it; the order can still ship. Check the order again later.
 - `order_id` (string, required)
-- `cancelled` (boolean, required): Whether the order page, reloaded after the request, no longer offers to cancel any item.
+- `cancelled` (boolean, required): True when the order page shows the cancellation as done: nothing left to cancel and no request still processing.
 - `status` (string | null, optional): Shipment status headline on the order page after the request, as displayed (e.g. Cancelled).
 
 ## FAQ
@@ -46,7 +47,7 @@ Required: order_id.
 
 ### What does it return?
 
-It returns items, status, order_id, cancelled.
+It returns items, status, pending, order_id, cancelled.
 
 ### Do I need to be logged in to amazon.com?
 

@@ -22,7 +22,7 @@
 			"address": "@reduck/amazon.com/cancel_order",
 			"path": "scripts/amazon.com/cancel_order.md",
 			"url": "https://reduck.ai/explore/scripts/reduck/amazon.com/cancel_order",
-			"lastmod": "2026-10-31"
+			"lastmod": "2026-11-16"
 		},
 		{
 			"address": "@reduck/amazon.com/checkout_cart",
